@@ -1,10 +1,21 @@
 <section class="w-full bg-blue-500">
-  <div class="max-w-4xl px-5 py-12 mx-auto text-xs text-white flex justify-between">
+  <div class="max-w-5xl px-5 py-12 mx-auto text-xs text-white flex justify-between">
     <div class="flex justify-start w-1/3">
       <?php the_custom_logo(); ?>
     </div>
     <div class="flex flex-col w-1/3">
       <h3 class="text-xl mb-5">Quick Links</h3>
+     <?php 
+        wp_nav_menu( array( 
+          'theme_location' => 'footer-menu',
+          'menu' => "footer-menu",
+          'menu_class' => "flex justify-start w-full",
+          'menu_id' => "footer-menu",
+          'container' => "nav", 
+          'container_class'	=> "text-white w-full", 
+          'container_id' => "footer-menu-container", 
+        ) );
+      ?>
     </div>
     <div class="flex flex-col w-1/3">
       <h3 class="text-xl mb-5">Contact Us</h3>
@@ -31,7 +42,7 @@
       </ul>
     </div>
   </div>
-  <div class="bg-blue-950 w-full px-4 mx-auto text-xs text-white py-2 px-5 flex justify-center">&copy; 2024 Space Case</div>
+  <div class="bg-blue-950 w-full mx-auto text-xs text-white py-2 px-5 flex justify-center">&copy; 2024 Space Case</div>
 </section>
 <?php wp_footer(); ?>
 </body>

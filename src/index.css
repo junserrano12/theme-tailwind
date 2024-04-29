@@ -1,3 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@tailwind base; 
+@tailwind components; 
+@tailwind utilities; 
+
+.wp-block-post-title,
+.wp-block-heading{
+    @apply text-blue-950 font-semibold text-3xl mb-5
+} 
+
+.button, button{
+    @apply px-5 py-2 rounded-xl bg-blue-500 text-white hover:bg-blue-400 transition delay-500 ease-in-out
+}
+
+.wp-block-group .wc-block-components-product-price{
+    @apply text-red-400 text-2xl font-medium mb-3
+}
+
+.wp-block-group .wp-block-post-excerpt{
+    @apply mb-3
+}
+
+.wpcf7{
+    @apply p-10 bg-blue-100 rounded-sm
+}
+
+input, textarea{
+    @apply border-gray-300 border-solid shadow-sm w-full px-5 py-2 border-x-2 border-y-2 mb-2
+}
+
+input[type=submit]{
+    @apply bg-blue-950 text-white border-none
+}

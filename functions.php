@@ -1,5 +1,11 @@
 <?php
+// Add block patterns
+require get_template_directory() . '/inc/block-patterns.php';
 
+
+/**
+ * Classes
+*/
 class PlaceholderBlock {
   function __construct($name) {
     $this->name = $name;
@@ -24,7 +30,6 @@ class PlaceholderBlock {
 
 new PlaceholderBlock("header");
 new PlaceholderBlock("footer");
-new PlaceholderBlock("page");
 
 
 /**
@@ -60,7 +65,6 @@ add_action( 'after_setup_theme', 'mytheme_register_nav_menu', 0 );
 /**
  * Filter hook
 */
-
 function mytheme_change_logo_class( $html ) {
 
     $html = preg_replace( '/(width|height)=\"\d*\"\s/', "", $html );
